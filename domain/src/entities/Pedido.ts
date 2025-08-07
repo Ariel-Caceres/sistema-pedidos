@@ -9,7 +9,7 @@ export type EstadoPedido = 'pendiente' | 'preparando' | 'listo' | 'entregado';
 
 export interface Pedido {
     id: string;
-    usuarioId: string;
+    usuarioId: number;
     items: PedidoItem[];
     estado: EstadoPedido;
     fecha: Date;
