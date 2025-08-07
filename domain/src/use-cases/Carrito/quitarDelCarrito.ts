@@ -1,4 +1,4 @@
-import type { CarritoRepositorio } from "../../services/carritoRepositorio"
+import type { CarritoRepositorio } from "../../services/carritoRepositorio.ts"
 
 export async function quitarDelCarrito(
     usuarioId: number,

@@ -1,4 +1,4 @@
-import type { ProductoRepositorio } from "../../services/productoRepositorio"
+import type { ProductoRepositorio } from "../../services/productoRepositorio.ts"
 
 export async function eliminarProducto(id: string, productoRepo: ProductoRepositorio) {
     const producto = await productoRepo.buscarPorId(id)

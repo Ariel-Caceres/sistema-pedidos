@@ -1,4 +1,4 @@
-import type { Producto } from "../entities/Producto"
+import type { Producto } from "../entities/Producto.ts"
 
 export interface ProductoRepositorio {
     crear(producto: Omit<Producto, "id">): Promise<Producto>

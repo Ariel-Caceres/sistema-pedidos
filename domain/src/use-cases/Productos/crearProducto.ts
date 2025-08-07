@@ -1,5 +1,5 @@
-import type { Producto } from "../../entities/Producto"
-import type { ProductoRepositorio } from "../../services/productoRepositorio"
+import type { Producto } from "../../entities/Producto.ts"
+import type { ProductoRepositorio } from "../../services/productoRepositorio.ts"
 
 type ProductoSinId = Omit<Producto, "id">
 

@@ -1,11 +1,11 @@
-import type { ProductoRepositorio } from "../../services/productoRepositorio"
+import type { ProductoRepositorio } from "../../services/productoRepositorio.ts"
 
 interface ActualizarProductoParams {
     id: string
     nombre?: string
     descripcion?: string
-    precio?: number
-    stock?: number
+    precio?: number,
+    disponible?: boolean,
     imagenUrl?: string
 }
 

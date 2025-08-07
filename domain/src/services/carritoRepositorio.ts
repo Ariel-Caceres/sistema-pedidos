@@ -1,4 +1,4 @@
-import type { CarritoItem } from "../entities/Carrito"
+import type { CarritoItem } from "../entities/Carrito.ts"
 
 export interface CarritoRepositorio {
     agregar(

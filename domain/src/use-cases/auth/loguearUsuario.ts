@@ -1,6 +1,6 @@
 
-import type { UsuarioRepository } from "../../services/usuarioRepositorio";
-import type { Usuario } from "../../entities/Usuario";
+import type { UsuarioRepository } from "../../services/usuarioRepositorio.ts"
+import type { Usuario } from "../../entities/Usuario.ts"
 
 export async function loginUsuario(
     email: string,
