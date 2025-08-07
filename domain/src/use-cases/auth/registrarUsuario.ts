@@ -1,4 +1,4 @@
-import type { Usuario } from "../entities/Usuario";
+import type { Usuario } from "../../entities/Usuario";
 
 export function registrarUsuario(
     nombre: string,
