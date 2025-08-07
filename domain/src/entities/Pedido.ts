@@ -1,6 +1,6 @@
 
 export interface PedidoItem {
-    productoId: string;
+    productoId: number;
     cantidad: number;
     precioUnitario: number;
 }
@@ -8,7 +8,7 @@ export interface PedidoItem {
 export type EstadoPedido = 'pendiente' | 'preparando' | 'listo' | 'entregado';
 
 export interface Pedido {
-    id: string;
+    id: number;
     usuarioId: number;
     items: PedidoItem[];
     estado: EstadoPedido;
