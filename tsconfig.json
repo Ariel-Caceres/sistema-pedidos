@@ -3,6 +3,8 @@
     "module": "esnext",
     "target": "es2020",
     "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "esnext"
     ],

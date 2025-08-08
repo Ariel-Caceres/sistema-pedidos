@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "main.ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19"
+  }
+}
