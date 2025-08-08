@@ -6,5 +6,11 @@ export async function agregarAlCarrito(
     cantidad: number,
     carritoRepo: CarritoRepositorio
 ) {
+    if (cantidad <= 0) {
+        throw new Error("La cantidad debe ser mayor a 0");
+
+    }
+
+
     return await carritoRepo.agregar(usuarioId, productoId, cantidad)
 }
