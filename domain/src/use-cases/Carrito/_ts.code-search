@@ -1,0 +1,204 @@
+# Query: .ts
+# ContextLines: 1
+
+69 results - 37 files
+
+package.json:
+  7      "test": "vitest",
+  8:     "start:backend": "tsx apps/backend/src/main.ts"
+  9    },
+
+domain\apps\backend\package.json:
+  3    "version": "1.0.0",
+  4:   "main": "main.ts",
+  5    "scripts": {
+  6:     "start": "ts-node src/main.ts",
+  7:     "dev": "nodemon --watch src --exec ts-node src/main.ts",
+  8      "build": "tsc",
+
+domain\apps\backend\src\main.ts:
+  1: // main.ts
+  2  import express from "express";
+
+domain\apps\backend\src\infraestructure\http\userController.ts:
+  2  import type { Request, Response } from "express";
+  3: import { registrarUsuario as makeUsuario } from "../../../../../src/use-cases/Auth/registrarUsuario";
+  4: import { loginUsuario as domainLogin } from "../../../../../src/use-cases/Auth/loguearUsuario";
+  5: import { InMemoryUsuarioRepo } from "../../../../../apps/backend/src/infraestructure/http/repositories/inMemoryRepo";
+  6  
+
+domain\apps\backend\src\infraestructure\http\userRoutes.ts:
+  1  import express from "express";
+  2: import { register, login } from "./userController";
+  3  
+
+domain\apps\backend\src\infraestructure\http\repositories\inMemoryRepo.ts:
+  1: // InMemoryUsuarioRepo.ts
+  2  import type { Usuario } from "../../../../../../src/entities/Usuario";
+
+domain\src\services\carritoRepositorio.ts:
+  1: import type { CarritoItem } from "../entities/Carrito"
+  2  
+
+domain\src\services\pedidosRepositorio.ts:
+  1: import type { Pedido, PedidoItem, EstadoPedido } from "../entities/Pedido"
+  2  
+
+domain\src\services\productoRepositorio.ts:
+  1: import type { Producto } from "../entities/Producto"
+  2  
+
+domain\src\services\usuarioRepositorio.ts:
+  1  
+  2: import type { Usuario } from "../entities/Usuario"
+  3  
+
+domain\src\use-cases\Auth\loguarUsuario.test.ts:
+  1  import { describe, it, expect, vi } from "vitest"
+  2: import { loginUsuario } from "../Auth/loguearUsuario"
+  3: import type { UsuarioRepository } from "../../services/usuarioRepositorio"
+  4: import type { Usuario } from "../../entities/Usuario"
+  5  
+
+domain\src\use-cases\Auth\loguearUsuario.ts:
+  1  
+  2: import type { UsuarioRepository } from "../../services/usuarioRepositorio"
+  3: import type { Usuario } from "../../entities/Usuario"
+  4  
+
+domain\src\use-cases\Auth\registrarUsuario.test.ts:
+  1  import { describe, it, expect } from "vitest"
+  2: import { registrarUsuario } from "./registrarUsuario"
+  3  
+
+domain\src\use-cases\Auth\registrarUsuario.ts:
+  1: import type { Usuario } from "../../entities/Usuario"
+  2: import type { UsuarioRepository } from "../../services/usuarioRepositorio";
+  3  
+
+domain\src\use-cases\Carrito\agregarAlCarrito.test.ts:
+  1  import { describe, it, expect, vi } from "vitest"
+  2: import type { CarritoRepositorio } from "../../services/carritoRepositorio"
+  3: import { agregarAlCarrito } from "./agregarAlCarrito"
+  4  
+
+domain\src\use-cases\Carrito\agregarAlCarrito.ts:
+  1: import type { CarritoRepositorio } from "../../services/carritoRepositorio"
+  2  
+
+domain\src\use-cases\Carrito\quitarDelCarrito.test.ts:
+  1  import { describe, it, expect, vi } from "vitest"
+  2: import { quitarDelCarrito } from "../Carrito/quitarDelCarrito"
+  3: import type { CarritoRepositorio } from "../../services/carritoRepositorio"
+  4  
+
+domain\src\use-cases\Carrito\quitarDelCarrito.ts:
+  1: import type { CarritoRepositorio } from "../../services/carritoRepositorio"
+  2  
+
+domain\src\use-cases\Carrito\vaciarCarrito.test.ts:
+  1  import { describe, it, expect, vi } from "vitest"
+  2: import { vaciarCarrito } from "../Carrito/vaciarCarrito"
+  3: import type { CarritoRepositorio } from "../../services/carritoRepositorio"
+  4  
+
+domain\src\use-cases\Carrito\vaciarCarrito.ts:
+  1: import type { CarritoRepositorio } from "../../services/carritoRepositorio"
+  2  
+
+domain\src\use-cases\Carrito\verCarrito.test.ts:
+  1  import { describe, it, expect, vi } from "vitest"
+  2: import { verCarrito } from "../Carrito/verCarrito"
+  3: import type { CarritoRepositorio } from "../../services/carritoRepositorio"
+  4  
+
+domain\src\use-cases\Carrito\verCarrito.ts:
+  1: import type { CarritoRepositorio } from "../../services/carritoRepositorio"
+  2: import type { CarritoItem } from "../../entities/Carrito"
+  3  
+
+domain\src\use-cases\Pedidos\cambiarEstadoDelPedido.test.ts:
+  1  import { describe, it, expect, vi, beforeEach } from "vitest";
+  2: import { cambiarEstadoPedido } from "../../../src/use-cases/Pedidos/cambiarEstadoDelPedido";
+  3: import type { PedidoRepositorio } from "../../../src/services/pedidosRepositorio";
+  4: import type { Pedido } from "../../../src/entities/Pedido";
+  5  
+
+domain\src\use-cases\Pedidos\cambiarEstadoDelPedido.ts:
+  1: import type { PedidoRepositorio } from "../../services/pedidosRepositorio"
+  2: import type { EstadoPedido } from "../../entities/Pedido"
+  3: import type { Pedido } from "../../entities/Pedido"
+  4  
+
+domain\src\use-cases\Pedidos\crearPedidosDesdeElCarrito.test.ts:
+  1  import { describe, it, expect, vi, beforeEach } from "vitest";
+  2: import { crearPedidoDesdeCarrito } from "../../../src/use-cases/Pedidos/crearPedidoDesdeCarrito";
+  3: import type { CarritoRepositorio } from "../../../src/services/carritoRepositorio";
+  4: import type { PedidoRepositorio } from "../../../src/services/pedidosRepositorio";
+  5: import type { Pedido } from "../../../src/entities/Pedido";
+  6  
+
+domain\src\use-cases\Pedidos\listarPedidos.test.ts:
+  1  import { describe, it, expect, vi, beforeEach } from "vitest"
+  2: import { listarPedidos } from "../../../src/use-cases/Pedidos/listarPedidos"
+  3: import type { PedidoRepositorio } from "../../../src/services/pedidosRepositorio"
+  4: import type { Pedido } from "../../../src/entities/Pedido"
+  5  
+
+domain\src\use-cases\Pedidos\listarPedidos.ts:
+  1: import type { PedidoRepositorio } from "../../services/pedidosRepositorio"
+  2: import type { Pedido } from "../../entities/Pedido"
+  3  
+
+domain\src\use-cases\Pedidos\listarPedidosPorUsuario.test.ts:
+  1  import { describe, it, expect, vi, beforeEach } from "vitest"
+  2: import { listarPedidosPorUsuario } from "../../../src/use-cases/Pedidos/listarPedidosPorUsuario"
+  3: import type { PedidoRepositorio } from "../../../src/services/pedidosRepositorio"
+  4: import type { Pedido } from "../../../src/entities/Pedido"
+  5  
+
+domain\src\use-cases\Pedidos\listarPedidosPorUsuario.ts:
+  1: import type { PedidoRepositorio } from "../../services/pedidosRepositorio"
+  2: import type { Pedido } from "../../entities/Pedido"
+  3  
+
+domain\src\use-cases\Productos\actualizarProductos.test.ts:
+  1  import { describe, it, expect, vi, beforeEach } from "vitest"
+  2: import { actualizarProducto } from "../../../src/use-cases/Productos/actualizarProductos"
+  3: import type { Producto } from "../../../src/entities/Producto"
+  4: import type { ProductoRepositorio } from "../../../src/services/productoRepositorio"
+  5  
+
+domain\src\use-cases\Productos\actualizarProductos.ts:
+  1: import type { ProductoRepositorio } from "../../services/productoRepositorio"
+  2  
+
+domain\src\use-cases\Productos\crearProducto.test.ts:
+  1: import { crearProducto } from "..//Productos/crearProducto"
+  2  import { vi, describe, it, expect } from "vitest"
+
+domain\src\use-cases\Productos\crearProducto.ts:
+  1: import type { Producto } from "../../entities/Producto"
+  2: import type { ProductoRepositorio } from "../../services/productoRepositorio"
+  3  
+
+domain\src\use-cases\Productos\eliminarProducto.test.ts:
+  1  import { describe, it, expect, vi } from "vitest"
+  2: import type { ProductoRepositorio } from "../../services/productoRepositorio"
+  3: import { eliminarProducto } from "./eliminarProducto"
+  4  
+
+domain\src\use-cases\Productos\eliminarProducto.ts:
+  1: import type { ProductoRepositorio } from "../../services/productoRepositorio"
+  2  
+
+domain\src\use-cases\Productos\listarPorductos.ts:
+  1: import type { ProductoRepositorio } from "../../services/productoRepositorio"
+  2: import type { Producto } from "../../entities/Producto"
+  3  
+
+domain\src\use-cases\Productos\listarProducto.test.ts:
+  1  import { describe, it, expect, vi } from "vitest"
+  2: import type { ProductoRepositorio } from "../../services/productoRepositorio"
+  3: import { listarProductos } from "../Productos/listarPorductos"
+  4  

@@ -1,6 +1,6 @@
 // InMemoryUsuarioRepo.ts
-import type { Usuario } from "../../../../domain/src/entities/Usuario";
-import type { UsuarioRepository } from "../../../../domain/src/services/usuarioRepositorio";
+import type { Usuario } from "../../../../../../src/entities/Usuario";
+import type { UsuarioRepository } from "../../../../../../src/services/usuarioRepositorio";
 
 export class InMemoryUsuarioRepo implements UsuarioRepository {
     private usuarios: Map<string, Usuario> = new Map();

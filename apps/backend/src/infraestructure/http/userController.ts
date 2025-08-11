@@ -1,8 +1,9 @@
 
-import { Request, Response } from "express";
-import { registrarUsuario as makeUsuario } from "../../../../../src/use-cases/Auth/registrarUsuario.ts";
-import { loginUsuario as domainLogin } from "../../../../../src/use-cases/Auth/loguearUsuario.ts";
-import { InMemoryUsuarioRepo } from "../repositories/InMemoryUsuarioRepo.ts";
+import type { Request, Response } from "express";
+import { crearPedidoDesdeCarrito } from "@domain/use-cases/Pedidos/crearPedidoDesdeCarrito";
+import { registrarUsuario as makeUsuario } from "@domain/use-cases/Auth/registrarUsuario";
+import { loginUsuario as domainLogin } from "../../../../../domain/src/use-cases/Auth/loguearUsuario";
+import { InMemoryUsuarioRepo } from "../../../../../apps/backend/src/infraestructure/http/repositories/inMemoryRepo";
 
 const repo = new InMemoryUsuarioRepo();
 
